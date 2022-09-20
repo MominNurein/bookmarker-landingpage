@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Css</title>
+  <link href="./build.css" rel="stylesheet" />
+  <style>
+    body {
+      width: 100% !important;
+      overflow-x: hidden;
+    }
+
+    /* .priceCard {
+      background-color: white !important;
+      color: rgb(39, 39, 39) !important;
+    }
+
+    .priceCard:hover {
+      background-color: rgba(184, 155, 212, 0.636) !important;
+    } */
+  </style>
+</head>
+
+<body class=" w-screen bg-slate-900 ">
+  <nav class="md:flex block justify-around md:justify-between py-2 px-6 md:mx-20 items-center mt-6">
+    <div class="flex justify-between items-center pb-2">
+      <a onclick="print()" href="#"
+        class="text-white first-letter:text-primary text-4xl font-bold first-letter:uppercase">book<span
+          class="text-primary">M</span>arker</a>
+      <div class="icon cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 text-white navButton block sm:hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 hidden navButton2 navButton text-white">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+    </div>
+
+    <ul
+      class="flex flex-col md:flex-row md:flex navItems sm:h-full md:g-full h-0 text-white transition duration-1000 ease-in-out"
+      style="align-items: center;overflow: hidden;  transition: height 0.35s ease-in-out;
+      ">
+      <a href="#home"
+        class="cursor-pointer uppercase text-sm py-2 sm:px-4 font-semibold md:font-normal text-center pb-3 transition-all hover:text-purple-300 hover:text-lg hover:px-12 hover:font-semibold transform duration-500">
+        Home
+      </a>
+      <a href="#features"
+        class="cursor-pointer uppercase text-sm py-2 sm:px-4 font-semibold md:font-normal text-center pb-3 transition-all hover:text-purple-300 hover:text-lg hover:px-12 hover:font-semibold transform duration-500">
+        Features
+      </a>
+      <a href="#pricing"
+        class="cursor-pointer uppercase text-sm py-2 sm:px-4 font-semibold md:font-normal text-center pb-3 transition-all hover:text-purple-300 hover:text-lg hover:px-12 hover:font-semibold transform duration-500">
+        Pricing
+      </a>
+      <a href="#contact"
+        class="cursor-pointer uppercase text-sm py-2 sm:px-4 font-semibold md:font-normal text-center pb-3 transition-all hover:text-purple-300 hover:text-lg hover:px-12 hover:font-semibold transform duration-500">
+        Contact
+      </a>
+      <div class="my-4 m-auto w-full text-center">
+        <a class="my-4 bg-primary px-8 py-2  text-white rounded-md shadow-md" href="#">
+          Login
+        </a>
+      </div>
+
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home"
+    class="flex-col items-center justify-center md:flex md:justify-around px-6 md:px-8 w-100 mb-28 md:flex-row-reverse ">
+    <div class="p-4">
+      <img class="w-full " src="./deeplink2.svg" alt="" />
+    </div>
+    <div class="w-full md:w-full p-4 md:ml-20">
+      <h3 class="text-3xl sm:text-5xl font-semibold text-primary w-full">
+        A Simple Bookmark Manager
+      </h3>
+      <p class="text-white mt-3 font-light text-justify mb-8 w-full sm:w-1/2">
+        A clean and simple interface to organize your favourite websites. Open
+        a new browser tab and see your sites load instantly. Try it for free.
+      </p>
+      <div class=" mt-5">
+        <a class="bg-primary border-solid border-primary border-2 text-white tracking-wider font-bold px-10 py-3 mt-6 rounded-md shadow-sm block sm:inline mx-1 text-center"
+          href="#">
+          Get it in chrome
+        </a>
+        <a class="transition-colors hover:text-white hover:bg-primary duration-300 transform bg-transparent border-solid border-primary border-2 text-primary font-bold px-10 py-3 mt-6 rounded-md shadow-sm block sm:inline mx-1 text-center"
+          href="#">
+          Get it in firefox
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featuers -->
+  <section id="features" class="md:bg-gray-100 bg-gray-100 mt-20 pb-16 px-4 w-full">
+    <h3 class="text-center text-gray-800 text-3xl font-normal pt-20">
+      Features
+    </h3>
+    <p class="text-center m-auto pt-2 font-light w-full sm:w-1/2 px-4 text-gray-500">
+      Our aim is to make it quick and easy for you to access your favourite
+      websites. Your bookmarks sync between your devices so you can access
+      them on the go.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full mt-20">
+      <!-- <div class="w-full mt-20"> -->
+      <!-- <div class="bg-white py-8 px-6 w-full rounded-t-xl shadow-2xl space-y-10 mt-4 "> -->
+      <div class="flex flex-col justify-evenly bg-white py-8 px-6 w-full rounded-t-xl shadow-2xl space-y-10 mt-4 ">
+        <h1 class="text-center first-letter:text-primary text-gray-800 md:text-3xl text-2xl font-light">
+          Sharing bookmarks
+        </h1>
+        <img class="w-full rounded-md shadow-sm m-auto" src="./illustration-features-tab-1.png" alt="" />
+        <p class="text-gray-500 text-justify text-sm font-light">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Aspernatur, exercitationem odio. Quis, consequatur.
+        </p>
+        <div>
+          <a class="bg-primary px-8 py-3 text-white rounded-md shadow-md" href="#">
+            see more
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col justify-evenly bg-white py-8 px-6 w-full rounded-t-xl shadow-2xl space-y-10 mt-4 ">
+        <h1 class="text-center first-letter:text-primary text-gray-800 md:text-3xl text-2xl font-light">
+          Intelligent search
+        </h1>
+        <img class="w-100 h-[250px] rounded-md shadow-sm m-auto" src="./illustration-features-tab-2.png" alt="" />
+        <p class="text-gray-500 text-justify text-sm font-light">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Aspernatur, exercitationem odio. Quis, consequatur.
+        </p>
+        <div>
+          <a class="bg-primary px-8 py-3 text-white rounded-md shadow-md" href="#">
+            see more
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-evenly bg-white py-8 px-6 w-full rounded-t-xl shadow-2xl space-y-10 mt-4 sm:col-span-2 md:col-span-1">
+        <h1 class="text-center first-letter:text-primary text-gray-800 md:text-3xl text-2xl font-light">
+          Speed Bookmarking
+        </h1>
+        <img class="w-full h-[250px] rounded-md shadow-sm m-auto" src="./illustration-features-tab-3.png" alt="" />
+        <p class="text-gray-500 text-justify text-sm font-light">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Aspernatur, exercitationem odio. Quis, consequatur.
+        </p>
+        <div>
+          <a class="bg-primary px-8 py-3 text-white rounded-md shadow-md" href="#">
+            see more
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="bg-slate-900 w-screen px-4 pb-6">
+    <h3 class="text-center text-white text-3xl font-normal pt-20">
+      Pricing
+    </h3>
+    <p class="text-center m-auto pt-2 font-light w-full sm:w-1/2 text-gray-400">
+      Our aim is to make it quick and easy for you to access your favourite
+      websites. Your bookmarks sync between your devices so you can access
+      them on the go.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4 px-6 mt-6 pt-6">
+      <div
+        class="priceCard bg-transparent transition-colors duration-300 transform rounded-lg hover:bg-slate-800 text-white px-6 py-4 space-y-4 w-full">
+        <h4>Intro</h4>
+        <h3 class="text-3xl font-bold">$19 <span class="text-lg font-light text-gray-400">/ Month</span></h3>
+        <p class="font-light text-sm">For most businesses that want to optimaize web queries.</p>
+        <ul class="space-y-4 w-full">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>All limited links</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>analytics platform </span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Chat support</span>
+
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span> Optimize hashtags</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+        <button
+          class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-[#7c7ada]">
+          Choose plan
+        </button>
+      </div>
+      <div
+        class="priceCard bg-transparent transition-colors duration-300 transform rounded-lg hover:bg-slate-800 text-white px-6 py-4 space-y-4 w-full">
+        <h4>Base</h4>
+        <h3 class="text-3xl font-bold">$29 <span class="text-lg font-light text-gray-400">/ Month</span></h3>
+        <p class="font-light text-sm ">For most businesses that want to optimaize web queries.</p>
+        <ul class="space-y-4">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>All limited links</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>analytics platform </span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Chat support</span>
+
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span> Optimize hashtags</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+        <button
+          class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-[#7c7ada]">
+          Choose plan
+        </button>
+      </div>
+      <div
+        class="priceCard bg-slate-800 transition-colors duration-300 transform rounded-lg hover:bg-slate-800 text-white px-6 py-4 space-y-4 w-full">
+        <h4>Popular</h4>
+        <h3 class="text-3xl font-bold">$39 <span class="text-lg font-light text-gray-400">/ Month</span></h3>
+        <p class="font-light text-sm">For most businesses that want to optimaize web queries.</p>
+        <ul class="space-y-4">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>All limited links</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>analytics platform </span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>Chat support</span>
+
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span> Optimize hashtags</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+        <button
+          class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-[#7c7ada]">
+          Choose plan
+        </button>
+      </div>
+      <div
+        class="priceCard bg-transparent transition-colors duration-300 transform rounded-lg hover:bg-slate-800 text-white px-6 py-4 space-y-4 w-full">
+        <h4>Pro</h4>
+        <h3 class="text-3xl font-bold">$49 <span class="text-lg font-light text-gray-400">/ Month</span></h3>
+        <p class="font-light text-sm">For most businesses that want to optimaize web queries.</p>
+        <ul class="space-y-4">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>All limited links</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>analytics platform </span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>Chat support</span>
+
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span> Optimize hashtags</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#706efb"
+              class="w-6 h-6 inline mr-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+        <button
+          class="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-[#7c7ada]">
+          Choose plan
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <!-- <section class="bg-gray-200 px-8">
+    <h3 class="text-center text-gray-800 text-3xl font-normal pt-20">
+      Get in touch
+    </h3>
+    <p class="text-center m-auto pt-2 font-light w-full sm:w-1/2 px-4 text-gray-500">
+      contact us for review , special orders and report bugs .
+    </p>
+
+    <form action="" class="flex flex-col">
+      <label for="email">Email</label>
+      <input class="focus:bg-primary" autocomplete="" type="email" id="email">
+      <label for="message">Message</label>
+      <textarea id="message" cols="30" rows="10"></textarea>
+    </form>
+  </section> -->
+
+  <section id="contact" class="bg-gray-200 px-10 py-12 w-full h-34 my-auto">
+    <h3 class="text-2xl uppercase font-semibold text-center text-slate-800 w-full">
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">whatever</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">your</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">100%</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">looks</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">like</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">,</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">give</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">it</span>
+      <span
+        class="quote-word cursor-pointer transition-all hover:text-primary hover:text-3xl hover:font-semibold transform duration-500">.</span>
+    </h3>
+  </section>
+
+  <footer class="bg-slate-900 h-20 py-10 px-6 text-center">
+    <img class="mx-auto" src="./logo-bookmark-white.png" alt="">
+    <p class="text-white font-light text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,aut?
+    </p>
+    <div class="flex flex-wrap justify-center gap-3 pt-6 pb-6">
+      <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+      </button>
+
+      <button class="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        </svg>
+      </button>
+      <button class="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+              d="M218.123122,218.127392 L180.191928,218.127392 L180.191928,158.724263 C180.191928,144.559023 179.939053,126.323993 160.463756,126.323993 C140.707926,126.323993 137.685284,141.757585 137.685284,157.692986 L137.685284,218.123441 L99.7540894,218.123441 L99.7540894,95.9665207 L136.168036,95.9665207 L136.168036,112.660562 L136.677736,112.660562 C144.102746,99.9650027 157.908637,92.3824528 172.605689,92.9280076 C211.050535,92.9280076 218.138927,118.216023 218.138927,151.114151 L218.123122,218.127392 Z M56.9550587,79.2685282 C44.7981969,79.2707099 34.9413443,69.4171797 34.9391618,57.260052 C34.93698,45.1029244 44.7902948,35.2458562 56.9471566,35.2436736 C69.1040185,35.2414916 78.9608713,45.0950217 78.963054,57.2521493 C78.9641017,63.090208 76.6459976,68.6895714 72.5186979,72.8184433 C68.3913982,76.9473153 62.7929898,79.26748 56.9550587,79.2685282 M75.9206558,218.127392 L37.94995,218.127392 L37.94995,95.9665207 L75.9206558,95.9665207 L75.9206558,218.127392 Z M237.033403,0.0182577091 L18.8895249,0.0182577091 C8.57959469,-0.0980923971 0.124827038,8.16056231 -0.001,18.4706066 L-0.001,237.524091 C0.120519052,247.839103 8.57460631,256.105934 18.8895249,255.9977 L237.033403,255.9977 C247.368728,256.125818 255.855922,247.859464 255.999,237.524091 L255.999,18.4548016 C255.851624,8.12438979 247.363742,-0.133792868 237.033403,0.000790807055">
+            </path>
+          </g>
+        </svg>
+      </button>
+
+      <button class="bg-red-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path
+            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+        </svg>
+      </button>
+
+      <button class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+          class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <g fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+              fill="currentColor" />
+          </g>
+        </svg>
+      </button>
+
+      <button class="bg-red-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+          class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <g fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z"
+              fill="currentColor" />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+  </footer>
+  <script>
+    var button = document.querySelector('.navButton')
+    var button2 = document.querySelector('.navButton2')
+    var navItems = document.querySelector('.navItems')
+    button.addEventListener("click", () => {
+      navItems.style.height = "220px"
+      button.classList.toggle("hidden")
+      button2.classList.toggle("hidden")
+    })
+    button2.addEventListener("click", () => {
+      navItems.style.height = "0px"
+      button.classList.toggle("hidden")
+      button2.classList.toggle("hidden")
+    })
+
+    // var word = document.querySelector(".quote-word")
+    // setInterval(() => {
+    //   console.log(word.innerHTML);
+    //   word.classList.add("text-primary")
+    //   word.classList.add("text-3xl")
+    //   word.classList.add("font-semibold")
+
+    //   setTimeout(() => {
+    //     word.classList.remove("text-primary")
+    //     word.classList.remove("text-3xl")
+    //     word.classList.remove("font-semibold")
+    //   }, 1000);
+    // }, 2000);
+  </script>
+</body>
+
+</html>
